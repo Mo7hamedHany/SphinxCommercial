@@ -1,0 +1,51 @@
+﻿@page
+@model SphinxCommercial.Presentation.Pages.ClientPages.CreateModel
+@using SphinxCommercial.Core.Models.Enums
+
+@{
+    ViewData["Title"] = "Add Client";
+}
+
+<h1>Add Client</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Client.Name">Name:</label>
+        <input asp-for="Client.Name" class="form-control" />
+        <span asp-validation-for="Client.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.Code">Code:</label>
+        <input asp-for="Client.Code" class="form-control" />
+        <span asp-validation-for="Client.Code" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.Class">Class:</label>
+        <select asp-for="Client.Class" class="form-control">
+            <option value="">-- Select Class --</option>
+            @foreach (var classValue in Enum.GetValues(typeof(ClientClass)))
+            {
+                <option value="@classValue">@classValue</option>
+            }
+        </select>
+        <span asp-validation-for="Client.Class" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Client.State">State:</label>
+        <select asp-for="Client.State" class="form-control">
+            <option value="">-- Select State --</option>
+            @foreach (var stateValue in Enum.GetValues(typeof(ClientState)))
+            {
+                <option value="@stateValue">@stateValue</option>
+            }
+        </select>
+        <span asp-validation-for="Client.State" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

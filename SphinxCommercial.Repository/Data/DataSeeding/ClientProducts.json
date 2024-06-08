@@ -1,0 +1,73 @@
+[
+    {
+      "StartDate": "2023-01-01",
+      "EndDate": null,
+      "License": "License123",
+      "ClientId": 1,
+      "ProductId": 1
+    },
+    {
+      "StartDate": "2023-02-01",
+      "EndDate": "2024-02-01",
+      "License": "License456",
+      "ClientId": 2,
+      "ProductId": 2
+    },
+    {
+      "StartDate": "2023-03-01",
+      "EndDate": null,
+      "License": "License789",
+      "ClientId": 3,
+      "ProductId": 3
+    },
+    {
+      "StartDate": "2023-04-01",
+      "EndDate": "2024-04-01",
+      "License": "License101",
+      "ClientId": 4,
+      "ProductId": 4
+    },
+    {
+      "StartDate": "2023-05-01",
+      "EndDate": null,
+      "License": "License102",
+      "ClientId": 5,
+      "ProductId": 5
+    },
+    {
+      "StartDate": "2023-06-01",
+      "EndDate": "2024-06-01",
+      "License": "License103",
+      "ClientId": 6,
+      "ProductId": 6
+    },
+    {
+      "StartDate": "2023-07-01",
+      "EndDate": null,
+      "License": "License104",
+      "ClientId": 7,
+      "ProductId": 7
+    },
+    {
+      "StartDate": "2023-08-01",
+      "EndDate": "2024-08-01",
+      "License": "License105",
+      "ClientId": 8,
+      "ProductId": 8
+    },
+    {
+      "StartDate": "2023-09-01",
+      "EndDate": null,
+      "License": "License106",
+      "ClientId": 9,
+      "ProductId": 9
+    },
+    {
+      "StartDate": "2023-10-01",
+      "EndDate": "2024-10-01",
+      "License": "License107",
+      "ClientId": 10,
+      "ProductId": 10
+    }
+  ]
+  

@@ -1,0 +1,38 @@
+﻿@page
+@model SphinxCommercial.Presentation.Pages.ClientProduct.DetailsModel
+@{
+}
+
+<div class="form-group">
+    <label asp-for="ClientProduct.ClientName" class="control-label">Client Name:</label>
+    <input readonly asp-for="ClientProduct.ClientName"  class="form-control" />
+</div>
+
+<div class="form-group">
+    <label asp-for="ClientProduct.ProductName" class="control-label">Product Name:</label>
+    <input readonly asp-for="ClientProduct.ProductName"  class="form-control" />
+</div>
+
+<div class="form-group">
+    <label asp-for="ClientProduct.StartDate" class="control-label">Start Date:</label>
+    <input readonly asp-for="ClientProduct.StartDate" type="date" class="form-control" />
+</div>
+
+<div class="form-group">
+    <label asp-for="ClientProduct.EndDate" class="control-label">End Date:</label>
+    <input readonly asp-for="ClientProduct.EndDate" type="date" class="form-control" />
+</div>
+
+<div class="form-group">
+    <label asp-for="ClientProduct.License" class="control-label">License:</label>
+    <input readonly asp-for="ClientProduct.License" class="form-control" />
+</div>
+
+<a asp-page="/ClientProduct/Edit" asp-route-id="@Model.ClientProduct.Id" class="m-2 btn btn-primary">Edit Client</a>
+<a asp-page="/ClientProduct/Index" class="m-2 btn btn-secondary">Back to List</a>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

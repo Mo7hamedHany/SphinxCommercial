@@ -1,0 +1,52 @@
+[
+  {
+      "Name": "Super Widget",
+      "Description": "A top-of-the-line widget with all the latest features.",
+      "IsActive": true
+  },
+  {
+      "Name": "Mega Gadget",
+      "Description": "An advanced gadget that simplifies your daily tasks.",
+      "IsActive": true
+  },
+  {
+      "Name": "Ultra Tool",
+      "Description": "A versatile tool for all your needs.",
+      "IsActive": true
+  },
+  {
+      "Name": "Pro Widget",
+      "Description": "A professional-grade widget for experts.",
+      "IsActive": true
+  },
+  {
+      "Name": "Basic Gadget",
+      "Description": "A simple and reliable gadget.",
+      "IsActive": true
+  },
+  {
+      "Name": "Advanced Tool",
+      "Description": "A high-performance tool for demanding tasks.",
+      "IsActive": true
+  },
+  {
+      "Name": "Standard Widget",
+      "Description": "A standard widget for everyday use.",
+      "IsActive": true
+  },
+  {
+      "Name": "Classic Gadget",
+      "Description": "A classic gadget with timeless design.",
+      "IsActive": true
+  },
+  {
+      "Name": "Eco Tool",
+      "Description": "An environmentally friendly tool.",
+      "IsActive": true
+  },
+  {
+      "Name": "Mini Widget",
+      "Description": "A compact widget for small tasks.",
+      "IsActive": true
+  }
+]

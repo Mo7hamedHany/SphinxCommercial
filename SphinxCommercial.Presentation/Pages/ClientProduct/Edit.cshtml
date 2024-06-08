@@ -1,0 +1,50 @@
+﻿@page 
+@model SphinxCommercial.Presentation.Pages.ClientProduct.EditModel
+@{
+    ViewData["Title"] = "Edit Client Product";
+}
+
+<h1>Edit Client Product</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="ClientProduct.Id" />
+    <div class="form-group">
+        <label asp-for="ClientProduct.ClientId" class="control-label"></label>
+        <select asp-for="ClientProduct.ClientId" class="form-control" asp-items="@Model.ClientList">
+            <option value="">-- Select Client --</option>
+        </select>
+        <span asp-validation-for="ClientProduct.ClientId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ClientProduct.ProductId" class="control-label"></label>
+        <select asp-for="ClientProduct.ProductId" class="form-select" asp-items="@Model.ProductList">
+            <option value="" selected disabled>---Select Product---</option>
+        </select>
+        <span asp-validation-for="ClientProduct.ProductId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ClientProduct.StartDate" class="control-label">Start Date:</label>
+        <input asp-for="ClientProduct.StartDate" type="date" class="form-control" />
+        <span asp-validation-for="ClientProduct.StartDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ClientProduct.EndDate" class="control-label">End Date:</label>
+        <input asp-for="ClientProduct.EndDate" type="date" class="form-control" />
+        <span asp-validation-for="ClientProduct.EndDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ClientProduct.License" class="control-label">License:</label>
+        <input asp-for="ClientProduct.License" class="form-control" />
+        <span asp-validation-for="ClientProduct.License" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Update Client Product</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,35 @@
+﻿
+@page
+@model SphinxCommercial.Presentation.Pages.Product.CreateModel
+@{
+  ViewData["Title"] = "Add Product";
+}
+
+<h1>Add Product</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Product.Name">Name:</label>
+        <input asp-for="Product.Name" class="form-control" />
+        <span asp-validation-for="Product.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Description">Description:</label>
+        <input asp-for="Product.Description" class="form-control" />
+        <span asp-validation-for="Product.Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Product.IsActive">Is Active:</label>
+        <input type="checkbox" asp-for="Product.IsActive" />
+        <span asp-validation-for="Product.IsActive" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

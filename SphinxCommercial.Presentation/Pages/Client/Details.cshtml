@@ -1,0 +1,68 @@
+﻿@page "{id:int}"
+@model SphinxCommercial.Presentation.Pages.Client.DetailsModel
+
+@{
+    ViewData["Title"] = "Client Details";
+}
+
+<h1>Client Details</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            Id
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Client.Id
+        </dd>
+        <dt class="col-sm-2">
+            Name
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Client.Name
+        </dd>
+        <dt class="col-sm-2">
+            Code
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Client.Code
+        </dd>
+        <dt class="col-sm-2">
+            Class
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Client.Class
+        </dd>
+        <dt class="col-sm-2">
+            State
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Client.State
+        </dd>
+    </dl>
+</div>
+<br /> <br />
+<h2>Related ClientProducts</h2>
+<div>
+    @if (Model.Client.ClientProducts.Any())
+    {
+        <ul>
+            @foreach (var clientProduct in Model.Client.ClientProducts)
+            {
+                <li>
+                    <strong>Product Name:</strong> @clientProduct.ProductName<br />
+                    <strong>Client Name:</strong> @clientProduct.ClientName<br />
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No related ClientProducts found.</p>
+    }
+</div>
+
+
+
+<a asp-page="/Client/Edit" asp-route-id="@Model.Client.Id" class="m-2 btn btn-primary">Edit Client</a>
+<a asp-page="/Client/Index" class="m-2 btn btn-secondary">Back to List</a>
